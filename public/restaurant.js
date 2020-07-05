@@ -1,6 +1,6 @@
 
 let restInfo = document.getElementById("restaurant-info")
-let = restId = document.location.hash.slice(1)
+let restId = document.location.hash.slice(1)
 //console.log(document.location.hash.slice(1))
 //let restId = document.location.search.slice(1) - if I wanted to use search query instead of a hash.
 //console.log(document.location.search)
