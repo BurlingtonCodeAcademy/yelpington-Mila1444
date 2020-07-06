@@ -1,6 +1,8 @@
-
-let restInfo = document.getElementById("restaurant-info")
+//getting location to fetch data 
 let restId = document.location.hash.slice(1)
+
+//variable for html elements
+let restInfo = document.getElementById("restaurant-info")
 let restName = document.getElementById("rest-name")
 let restAddress = document.getElementById("rest-address")
 let restPhone = document.getElementById("rest-phone")
@@ -11,9 +13,9 @@ let restNotes = document.getElementById("rest-notes")
 //let restId = document.location.search.slice(1) - if I wanted to use search query instead of a hash.
 //console.log(document.location.search)
 
+//variables
 let lat = 0
 let lon = 0
-
 
 //fetching info for restaurant list
 fetch(`https://yelpingtonapi.herokuapp.com/api/restaurants/${restId}`).catch((err) => {
@@ -24,6 +26,7 @@ fetch(`https://yelpingtonapi.herokuapp.com/api/restaurants/${restId}`).catch((er
     })
     .then((rest) => {
 
+        //creates HTML elements
         console.log(rest)
         let name = document.createElement('h2')
         name.innerHTML = `${rest.name}`
@@ -37,7 +40,7 @@ fetch(`https://yelpingtonapi.herokuapp.com/api/restaurants/${restId}`).catch((er
         website.innerHTML = `${rest.website}`
         let notes = document.createElement('ul') // can create list ul
         notes.innerHTML = `${rest.notes}`
-
+        //assigns html elemnts to restaurant page
         restInfo.appendChild(name)
         restInfo.appendChild(address)
         restInfo.appendChild(phone)
@@ -45,24 +48,19 @@ fetch(`https://yelpingtonapi.herokuapp.com/api/restaurants/${restId}`).catch((er
         restInfo.appendChild(hours)
         restInfo.appendChild(notes)
 
-        
-
+        //centers map and adds marker
         let myMap = L.map('map-rest').setView([rest.coords[0], rest.coords[1]], 18);
-
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(myMap)
-
         let marker = L.marker([lat, lon])
-
         let latLngArr = [rest.coords[0], rest.coords[1]]
         marker = L.marker(latLngArr).addTo(myMap).bindPopup(`<a href="/restaurant#${rest.id}">${rest.name}</a>`)
 
-
+        //adds popup to markers
         marker.addEventListener('mouseover', () => {
             marker.openPopup()
-
         })
     })
 

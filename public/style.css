@@ -10,7 +10,7 @@ li {
     list-style: none; 
 }
 
-
+/* main containers */
 .main-container {
     display: flex;
     flex-direction: column;
@@ -75,6 +75,7 @@ li {
     width: 100%;
 }
 
+/* restaurant content containers */
 .restaurants{
     display: flex;
     flex-direction: column;
@@ -107,8 +108,7 @@ li {
     background-color:  rgba(177, 159, 197, 0.329);
 }
 
-
-
+/* map containers */
 #map{
     height: 100%;
     width: 69%;
@@ -125,6 +125,7 @@ li {
     border-radius: .50em;
 }
 
+/* comments section on restaurant page */
 .comments{
     display:flex;
     flex-direction: column;
