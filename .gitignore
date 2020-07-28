@@ -67,3 +67,6 @@ typings/
 cypress/screenshots
 cypress/videos
 
+#draft version
+restaurant-myversion.js
+

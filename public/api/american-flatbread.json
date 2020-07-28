@@ -1,0 +1,7 @@
+{
+    "id": "american-flatbread",
+    "name": "American Flatbread",
+    "address": "115 St Paul St Burlington, VT 05401",
+    "coords": [44.4766084, -73.2164283],
+    "infoUrl": "https://yelpingtonapi.herokuapp.com/api/restaurants/american-flatbread"
+}

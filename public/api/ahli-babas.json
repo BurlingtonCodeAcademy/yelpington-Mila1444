@@ -1,0 +1,7 @@
+{
+    "id": "ahli-babas-kabob",
+    "name": "Ahli Baba's Kabob Shop",
+    "address": "163 Main St. Burlington, VT 05401",
+    "coords": [44.4758073, -73.2150059],
+    "infoUrl": "https://yelpingtonapi.herokuapp.com/api/restaurants/ahli-babas-kabob"
+}

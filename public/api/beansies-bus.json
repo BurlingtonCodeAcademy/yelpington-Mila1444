@@ -1,0 +1,7 @@
+{
+    "id": "beansies-bus",
+    "name": "Beansies Bus",
+    "address": "1 Sherman St. Burlington, VT 05401",
+    "coords": [44.4796495,-73.2204706],
+    "infoUrl": "https://yelpingtonapi.herokuapp.com/api/restaurants/beansies-bus"
+}

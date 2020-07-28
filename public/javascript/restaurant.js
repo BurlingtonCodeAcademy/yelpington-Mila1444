@@ -9,9 +9,9 @@ let restPhone = document.getElementById("rest-phone")
 let restHours = document.getElementById("rest-hours")
 let restWebsite = document.getElementById("rest-website")
 let restNotes = document.getElementById("rest-notes")
-//console.log(document.location.hash.slice(1))
-//let restId = document.location.search.slice(1) - if I wanted to use search query instead of a hash.
-//console.log(document.location.search)
+let commentsForm = document.getElementById("comments-form")
+let commentsContainer = document.getElementById("comments-container")
+let allComments = document.getElementById("all-comments")
 
 //variables
 let lat = 0
@@ -38,9 +38,10 @@ fetch(`https://yelpingtonapi.herokuapp.com/api/restaurants/${restId}`).catch((er
         hours.innerHTML = `${rest.hours}`
         let website = document.createElement('h5')
         website.innerHTML = `${rest.website}`
-        let notes = document.createElement('ul') // can create list ul
+        //creates list element
+        let notes = document.createElement('ul')
         notes.innerHTML = `${rest.notes}`
-        //assigns html elemnts to restaurant page
+        //assigns html elements to restaurant page
         restInfo.appendChild(name)
         restInfo.appendChild(address)
         restInfo.appendChild(phone)
@@ -63,4 +64,16 @@ fetch(`https://yelpingtonapi.herokuapp.com/api/restaurants/${restId}`).catch((er
             marker.openPopup()
         })
     })
+
+//function to submit form    
+function submitComment(event) {
+    event.preventDefault();
+    allComments.textContent = "Your Comment"
+}
+
+//adds event listener to form
+commentsForm.addEventListener('submit', submitComment);
+
+
+
 
