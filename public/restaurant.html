@@ -30,18 +30,27 @@
     </div>
     <div class="comments">
       <div id="comments-section">
-        <h3 id="comments-title">Comments</h3>
-        <div id="comments-container">
-          <p id="all-comments"></p>
-        </div>
+        <h5 id="comments-title">Comments</h5>
+        <div id="comments-container"></div>
       </div>
-      <form id="comments-form">
-        <label>Name:<input id="name" type="text" placeholder="Enter Name"></label>
-        <label>Email:<input id="email" type="text" placeholder="Enter Email"></label>
-        <label>Comments:<textarea id ="comment" placeholder="Enter Comments"></textarea></label>
-        <br><br>
-        <button type="submit">Submit</button>
-      </form>
+      <div id="form-container">
+        <form id="comments-form">
+          <h5>Add a Comment!</h5>
+          <div id="value-container">
+            <label>Name:</label>
+            <input id="name" type="text" placeholder="Enter Name">
+          </div>
+          <div id="value-container">
+            <label>Email:</label>
+            <input id="email" type="text" placeholder="Enter Email">
+          </div>
+          <div id="value-container">
+            <label>Comments:</label>
+            <textarea id="comment" placeholder="Enter Comments"></textarea>
+          </div>
+          <button id="button" type="submit">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
   <script src="./javascript/restaurant.js"></script>

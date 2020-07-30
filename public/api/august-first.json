@@ -3,5 +3,6 @@
     "name": "August First",
     "address": "149 S Champlain St. Burlington, VT 05401",
     "coords": [44.4754408, -73.2195054],
-    "infoUrl": "https://yelpingtonapi.herokuapp.com/api/restaurants/august-first"
+    "category": "Comfort Food",
+    "price": "$$"
 }

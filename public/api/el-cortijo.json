@@ -3,5 +3,6 @@
     "name": "El Cortijo Taqueria",
     "address": "189 Bank St. Burlington, VT 05401",
     "coords": [44.4780344, -73.2141866],
-    "infoUrl": "https://yelpingtonapi.herokuapp.com/api/restaurants/el-cortijo"
+    "category": "Comfort Food",
+    "price": "$$"
 }

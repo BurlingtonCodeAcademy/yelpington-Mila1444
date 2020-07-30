@@ -69,4 +69,6 @@ cypress/videos
 
 #draft version
 restaurant-myversion.js
+rest-myapi.js
+index-myapi.js
 
